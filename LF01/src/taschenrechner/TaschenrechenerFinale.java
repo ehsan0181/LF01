@@ -10,7 +10,7 @@ public class TaschenrechenerFinale {
 
 	public static void main(String[] args) throws IOException {
 		boolean weiter = false;
-
+		
 		do {
 			schreibeMenue();
 			String auswahl = bufferedReader.readLine();
@@ -32,7 +32,6 @@ public class TaschenrechenerFinale {
 
 			} else if (auswahl.equals("w")) {
 				wuerzelziehenMenue();
-
 			}
 
 			System.out.println();		
@@ -110,6 +109,7 @@ public class TaschenrechenerFinale {
 		System.out.println("[p] für Potenzieren");
 		System.out.println("[w] für Wuerzelziehen");
 		System.out.println();
+		
 	}
 
 }

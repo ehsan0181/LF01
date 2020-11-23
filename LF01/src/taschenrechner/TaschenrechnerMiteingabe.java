@@ -37,6 +37,7 @@ public class TaschenrechnerMiteingabe {
 				weiter = true;
 			} else {
 				weiter = false;
+			
 			}
 		}while(weiter == true);
 	}

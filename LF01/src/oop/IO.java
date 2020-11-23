@@ -114,7 +114,7 @@ public class IO {
 
 	public static int[] readIntegerArray1D() throws IOException {
 
-		System.out.println("Wie viele Werte?");
+		System.out.println("");
 
 		int zeilen = IO.readInteger();
 
