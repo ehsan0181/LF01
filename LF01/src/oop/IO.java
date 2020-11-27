@@ -285,8 +285,25 @@ public class IO {
 		return zahl;
 
 	}
-
-	public static void writeIntegerTable(double[][] zahl) {
+	public static int [][] readIntegerTable(int anzahlSpalten, int anzahlZeilen)throws IOException{
+		int [][] matrixInteger2 = new int [anzahlSpalten][anzahlZeilen];
+		for (int i=0;i< matrixInteger2.length;i++) {
+			for(int j=0;j< matrixInteger2[i].length;j++) {
+				System.out.println("Erfassen Sie die Zahlen ["+ i + "] und ["+ j +"]");
+				 matrixInteger2[i][j] = IO.readInteger();
+			}
+		}
+		return matrixInteger2;
+	}
+	public static void readIntegerTable(int[][] matrixInteger3)throws IOException{
+		for (int i=0;i< matrixInteger3.length;i++) {
+			for(int j=0;j< matrixInteger3[i].length;j++) {
+				System.out.println("Erfassen Sie die Zahlen ["+ i + "] und ["+ j +"]");
+				 matrixInteger3[i][j] = IO.readInteger();
+			}
+		}
+	}
+	public static void writeIntegerTable(int[][] zahl) {
 
 		//Ausgabe in der Console
 		for (int i=0;i<zahl.length;i++) {
@@ -314,6 +331,24 @@ public class IO {
 
 		return text;
 
+	}
+	public static String [][] readStringTable(int anzahlSpalten, int anzahlZeilen)throws IOException{
+		String [][] matrixString2 = new String [anzahlSpalten][anzahlZeilen];
+		for (int i=0;i< matrixString2.length;i++) {
+			for(int j=0;j< matrixString2[i].length;j++) {
+				System.out.println("Erfassen Sie die Zahlen ["+ i + "] und ["+ j +"]");
+				 matrixString2[i][j] = IO.readString();
+			}
+		}
+		return matrixString2;
+	}
+	public static void readStingTable(String[][] matrixString3)throws IOException{
+		for (int i=0;i< matrixString3.length;i++) {
+			for(int j=0;j< matrixString3[i].length;j++) {
+				System.out.println("Erfassen Sie die Zahlen ["+ i + "] und ["+ j +"]");
+				 matrixString3[i][j] = IO.readString();
+			}
+		}
 	}
 	public static void writeStringTable(String[][] text) {
 

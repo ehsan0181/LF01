@@ -20,5 +20,6 @@ public class Aufgabe4 {
 		double[][] tableDouble3 = new double[zeileTable3][spalteTable3];
 		IO.readDoubleTable(tableDouble3);
 		IO.writeDoubleTable(tableDouble3);
+	}
 
 }
