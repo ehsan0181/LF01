@@ -220,5 +220,92 @@ public class IO {
 		return array;
 
 	}
+	public static double[][] readDoubleTable()throws IOException{
 
+		System.out.println("Wie viele Zeile: ");
+		int zeile=IO.readInteger();
+		System.out.println("Wie viele Spalte: ");
+		int spalte=IO.readInteger();
+		double [][]zahl = new double [zeile][spalte];
+		//Eingabe in der Console 
+		for (int i=0;i<zahl.length;i++) {
+			for(int j=0;j<zahl[i].length;j++) {
+				System.out.println("Erfassen Sie die Zahlen ["+ i + "] und ["+ j +"]");
+				zahl[i][j] = IO.readDouble();
+			}
+		}
+
+		return zahl;
+
+	}
+
+	public static void writeDoubleTable(double[][] zahl) {
+
+		//Ausgabe in der Console
+		for (int i=0;i<zahl.length;i++) {
+			for(int j=0;j<zahl[i].length;j++) {
+				System.out.print(zahl[i][j]+"\t");
+			}
+			System.out.println();
+		}
+	}
+	public static int[][] readIntegerTable()throws IOException{
+
+		System.out.println("Wie viele Zeile: ");
+		int zeile=IO.readInteger();
+		System.out.println("Wie viele Spalte: ");
+		int spalte=IO.readInteger();
+		int [][]zahl = new int [zeile][spalte];
+		//Eingabe in der Console 
+		for (int i=0;i<zahl.length;i++) {
+			for(int j=0;j<zahl[i].length;j++) {
+				System.out.println("Erfassen Sie die Zahlen ["+ i + "] und ["+ j +"]");
+				zahl[i][j] = IO.readInteger();
+			}
+		}
+
+		return zahl;
+
+	}
+
+	public static void writeIntegerTable(double[][] zahl) {
+
+		//Ausgabe in der Console
+		for (int i=0;i<zahl.length;i++) {
+			for(int j=0;j<zahl[i].length;j++) {
+				System.out.print(zahl[i][j]+"\t");
+			}
+			System.out.println();
+		}
+	}
+	public static String[][] readStringTable()throws IOException{
+
+		System.out.println("Wie viele Zeile: ");
+		int zeile=IO.readInteger();
+		System.out.println("Wie viele Spalte: ");
+		int spalte=IO.readInteger();
+		String [][]text = new String [zeile][spalte];
+		//Eingabe in der Console 
+		for (int i=0;i<text.length;i++) {
+			for(int j=0;j<text[i].length;j++) {
+				System.out.println("Erfassen Sie die Zahlen ["+ i + "] und ["+ j +"]");
+				text[i][j] = IO.readString();
+			}
+		}
+
+		return text;
+
+	}
+	public static void writeStringTable(String[][] zahl) {
+
+		//Ausgabe in der Console
+		for (int i=0;i<zahl.length;i++) {
+			for(int j=0;j<zahl[i].length;j++) {
+				System.out.print(zahl[i][j]+"\t");
+			}
+			System.out.println();
+		}
+
+
+	}
 }
