@@ -15,6 +15,8 @@ public class IOMatrizen {
 			for(int j=0; j< zahlen[anzahlSpalte].length;j++) {
 				zahlen[anzahlZeil][anzahlSpalte]=i-j;
 				
+				
+				
 		}
 
 	}

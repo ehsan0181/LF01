@@ -221,23 +221,41 @@ public class IO {
 
 	}
 	public static double[][] readDoubleTable()throws IOException{
-
 		System.out.println("Wie viele Zeile: ");
 		int zeile=IO.readInteger();
 		System.out.println("Wie viele Spalte: ");
 		int spalte=IO.readInteger();
-		double [][]zahl = new double [zeile][spalte];
+		double [][] matrixDouble = new double [zeile][spalte];
 		//Eingabe in der Console 
-		for (int i=0;i<zahl.length;i++) {
-			for(int j=0;j<zahl[i].length;j++) {
+		for (int i=0;i< matrixDouble.length;i++) {
+			for(int j=0;j< matrixDouble[i].length;j++) {
 				System.out.println("Erfassen Sie die Zahlen ["+ i + "] und ["+ j +"]");
-				zahl[i][j] = IO.readDouble();
+				 matrixDouble[i][j] = IO.readDouble();
 			}
 		}
-
-		return zahl;
-
+		return  matrixDouble;
 	}
+	
+	public static double[][] readDoubleTable(int anzahlSpalten, int anzahlZeilen)throws IOException{
+		double [][] matrixDouble2 = new double [anzahlSpalten][anzahlZeilen];
+		for (int i=0;i< matrixDouble2.length;i++) {
+			for(int j=0;j< matrixDouble2[i].length;j++) {
+				System.out.println("Erfassen Sie die Zahlen ["+ i + "] und ["+ j +"]");
+				 matrixDouble2[i][j] = IO.readDouble();
+			}
+		}
+		return  matrixDouble2;
+	}
+	
+	public static void readDoubleTable(double[][] matrixDouble3)throws IOException{
+		for (int i=0;i< matrixDouble3.length;i++) {
+			for(int j=0;j< matrixDouble3[i].length;j++) {
+				System.out.println("Erfassen Sie die Zahlen ["+ i + "] und ["+ j +"]");
+				 matrixDouble3[i][j] = IO.readDouble();
+			}
+		}
+	}
+	
 
 	public static void writeDoubleTable(double[][] zahl) {
 
