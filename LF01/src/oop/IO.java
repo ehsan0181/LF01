@@ -285,6 +285,7 @@ public class IO {
 		System.out.println("Wie viele Spalte: ");
 		int spalte=IO.readInteger();
 		String [][]text = new String [zeile][spalte];
+		
 		//Eingabe in der Console 
 		for (int i=0;i<text.length;i++) {
 			for(int j=0;j<text[i].length;j++) {
@@ -296,12 +297,12 @@ public class IO {
 		return text;
 
 	}
-	public static void writeStringTable(String[][] zahl) {
+	public static void writeStringTable(String[][] text) {
 
 		//Ausgabe in der Console
-		for (int i=0;i<zahl.length;i++) {
-			for(int j=0;j<zahl[i].length;j++) {
-				System.out.print(zahl[i][j]+"\t");
+		for (int i=0;i<text.length;i++) {
+			for(int j=0;j<text[i].length;j++) {
+				System.out.print(text[i][j]+"\t");
 			}
 			System.out.println();
 		}
